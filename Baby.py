@@ -1,9 +1,9 @@
-import random,string
+import random,string # 
 
-vowels="aeiouy"
-consonants="bcdfghjklmnpqrstvwxz"
+vowels="aeiouy"    #Varible to hold the vowel letters
+consonants="bcdfghjklmnpqrstvwxz" #Variable to hold the consonants
 letter= string.ascii_lowercase
-letter1=random.choice(string.ascii_lowercase)
+letter1=random.choice(string.ascii_lowercase) ###Generates random letters in lowercase only
 letter2=random.choice(string.ascii_lowercase)
 letter3=random.choice(string.ascii_lowercase)
 letter4=random.choice(string.ascii_lowercase)
@@ -12,7 +12,7 @@ letter5=random.choice(string.ascii_lowercase)
 
 
 
-letter_input_1=input('Choose a letter..."v" for vowels,"c" for consonants,"l" for any other letter:')
+letter_input_1=input('Choose a letter..."v" for vowels,"c" for consonants,"l" for any other letter:') ### User inputs the corresponding letter to determine where the randomizer will pull from 
 letter_input_2=input('Choose a letter..."v" for vowels,"c" for consonants, "l" for any other letter:')
 letter_input_3=input('Choose a letter..."v" for vowels,"c" for consonants, "l" for any other letter:')
 letter_input_4=input('Choose a letter..."v" for vowels,"c" for consonants, "l" for any other letter:')
@@ -21,15 +21,15 @@ letter_input_5=input('Choose a letter..."v" for vowels,"c" for consonants, "l" f
 
 
 def generator():
-    if letter_input_1 == "v":
+    if letter_input_1 == "v":       # if user chooses v then the randomizer will select a letter from the vowels variable
         letter1=random.choice(vowels)
 
-    elif letter_input_1 =="c":
+    elif letter_input_1 =="c":              # if the user chooses c then the randomizer will select a letter from consonants variable
           letter1=random.choice(consonants)
-    elif letter_input_1 =="l":
+    elif letter_input_1 =="l":               # if the user chooses l then the randomizer will select a letter from the letter variable 
           letter1=random.choice(letter)
     else:
-          letter1=letter_input_1
+          letter1=letter_input_1 .        ### Same process for the remaining inputs
 
     if letter_input_2 == "v":
         letter2 = random.choice(vowels)
@@ -67,10 +67,10 @@ def generator():
     else:
         letter5= letter_input_5
 
-    name = letter1 + letter2 + letter3 + letter4 + letter5
+    name = letter1 + letter2 + letter3 + letter4 + letter5  # This will combine the inputs into one individual name 
     return(name)
 
-for babynames in range(20):
+for babynames in range(20):  # loops through the entire program to generate 20 random names
     print(generator())
 
 
