@@ -29,7 +29,7 @@ def generator():
     elif letter_input_1 =="l":               # if the user chooses l then the randomizer will select a letter from the letter variable 
           letter1=random.choice(letter)
     else:
-          letter1=letter_input_1 .        ### Same process for the remaining inputs
+          letter1=letter_input_1        ### Same process for the remaining inputs
 
     if letter_input_2 == "v":
         letter2 = random.choice(vowels)
